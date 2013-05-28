@@ -105,9 +105,9 @@ def tweet_submit():
                       data={"status":texto},
                       auth=oauth)
     if r.status_code == 200:
-        return "<p>Tweet enviado correctamente.</p><br/><a href='http://twowtter-adrianjb.rhcloud.com/datoswow'>¡Volver!</a>"
+        return "<p>Tweet enviado correctamente.</p><form><input type="button" value="VOLVER ATRÁS" name="Back2" onclick="history.back()" /></form>"
     else:
-        return "<p>Problema al enviar el tweet.</p><br/><a href='http://twowtter-adrianjb.rhcloud.com/datoswow'>¡Volver!</a>"
+        return "<p>Problema al enviar el tweet.</p><form><input type="button" value="VOLVER ATRÁS" name="Back2" onclick="history.back()" /></form>"
 
 # Openshift - This must be added in order to do correct path lookups for the views
 import os
